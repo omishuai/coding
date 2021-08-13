@@ -5,9 +5,10 @@ class app {
 
 
 	// group meetings that cannot happen at the same time, and can happen at the same time
+	// after we organzie the meetings and their relations, we can traverse the meetings
 	public List<List<Integer>> group(List<List<Integer>> meetings) {
 
-		// find groups that can be grouped together, and groups that cannot
+		// for each meeting, find out the meetings that can coexit and cannot coexist
 		HashMap<Integer, Set<Integer> coexist = new HashMap<>();
 		HashMap<Integer, Set<Integer>> exclude = new HashMap<>();
 		coexist.put(0, new HashSet<Integer>());
